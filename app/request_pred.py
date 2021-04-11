@@ -23,7 +23,7 @@ json_obs = {'datetime':'2012-05-06 12:00:00',
 
 #local
 try:
-    req = requests.post('http://127.0.0.1:8000/predict', json=json_obs)
+    req = requests.post('http://127.0.0.1:80/predict', json=json_obs)
     print(req.text)
     
 except:

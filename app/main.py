@@ -20,15 +20,15 @@ model_gbm = pickle.load(open('bike_gbm.pkl', 'rb'))
 # =============================================================================
 # INPUT
 # =============================================================================
-json_obs = {'datetime':'2012-05-06 12:00:00',
-            'season': 2,
-            'holiday':0,
-            'workingday':0,
-            'weather':1,
-            'temp':28.22,
-            'atemp':30.89,
-            'humidity':35,
-            'windspeed':10.2}
+json_obs = {"datetime":"2012-05-06 12:00:00",
+            "season": 2,
+            "holiday":0,
+            "workingday":0,
+            "weather":1,
+            "temp":28.22,
+            "atemp":30.89,
+            "humidity":35,
+            "windspeed":10.2}
 
 # =============================================================================
 # #as BaseModel
@@ -108,6 +108,6 @@ def predict(data: conditions):
 # PROCESS
 # =============================================================================
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8000)
+    uvicorn.run(app, host='127.0.0.1', port=80)
     
 #uvicorn app:app --reload    
